@@ -33,7 +33,7 @@ function playSound(key) {
 
 function effect(currentKey) {
     var activeButton = document.querySelector("." + currentKey); /*document.querySelector("") 可get css中的一個元素(只會get一個);
-                                                                      	document.getElementById("")只能get有id的(只會get一個)*/
+                                                                   document.getElementById("")只能get有id的(只會get一個)*/
 
     if (activeButton) {
         activeButton.classList.add("pressed");
@@ -50,9 +50,9 @@ for (var i = 0; i < drumButtons.length; i++) {    //它會回傳所有符合的(
 }
 
 document.addEventListener("keydown", function (event) {  /*Keyboard Event:
-														  "keydown"-某個鍵被按下時
-														  "keypress"-某個字母鍵/數字鍵被按下時
-														  "keyup"-放開某個鍵時(和keydown相反)*/
+							  "keydown"-某個鍵被按下時
+							  "keypress"-某個字母鍵/數字鍵被按下時
+							  "keyup"-放開某個鍵時(和keydown相反)*/
     playSound(event.key); //key是event這個object的屬性 會給被按下的鍵的值
     effect(event.key);
 });
